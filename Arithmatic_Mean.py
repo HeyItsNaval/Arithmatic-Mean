@@ -1,24 +1,9 @@
 # We are going to take Arithmatic mean of n-numbers
 from sympy import sympify
 
-# We are first making an universal function to check for integer numbers
-
-def is_definitely_integer(value):
-
-    try:
-        expr = sympify(value)
-        return expr.is_integer is True
-    except:
-        return False
-    
-def is_definitely_real(value):
-    try:
-        expr = sympify(value)
-        # Check if it's a real number and not an integer
-        return expr.is_real is True
-    except:
-        return False
-
+# We are first getting an universal function to check for integer numbers
+from is_definitely_Real import is_definitely_real
+from Is_definitely_Integer import is_definitely_integer
 
 # First start with taking inputs from the user
 n = "Hey_Its_Naval"
